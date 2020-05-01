@@ -10,16 +10,16 @@ const Layout = (props) => {
   const [name, setName] = useState('Welcome!');
   const [title, setTitle] = useState('Title');
 
-  const resource = () => {
-    // 何かしらの方法で値を取得
-    return { name: 'taro', age: 28 };
+  // コンテキストに設定するもの
+  function getResource() {
+    return { name: 'taro', age: 28 }
   };
+  const resource = getResource();
 
   return (
     <div>
-      <Header changeTitleAttr={setTitle} titleAttr={title} />
       <div className='my-grid'>
-        <header className='my-grid-item'>Hello, {name}</header>
+        <Header changeTitleAttr={setTitle} titleAttr={title} />
         <aside className='my-grid-item'>サイドバー</aside>
         <main className='my-grid-item'>
           <StateContext.Provider value={resource}>

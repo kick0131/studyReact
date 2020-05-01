@@ -1,7 +1,9 @@
 React練習
-==================================================
+===
 
-勉強
+* ReactフックAPI（Context,Reducer）
+* HTTPリクエスト(axios)
+* CSS gridレイアウト
 
 ## 準備
 * [node.js](https://nodejs.org/)
@@ -19,4 +21,7 @@ npm run build
 ## 利用方法
 * vsCodeからサーバ起動（npm run start）
 * ブラウザからhttp://localhost:8080にアクセス
+
+## 参考
+* [フックAPIリファレンス](https://ja.reactjs.org/docs/hooks-reference.html)
 

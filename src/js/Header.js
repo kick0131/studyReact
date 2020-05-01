@@ -1,17 +1,19 @@
-import React from "react";
-import Title from "./Title";
+import React, { useState } from "react";
 
 const Header = (props) => {
+  const [title, setTitle] = useState('world');
+
   const handleChange = (e) => {
-    const title = e.target.value;
-    props.changeTitleAttr(title);
+    setTitle(e.target.value);
   };
   console.log(props);
   return (
-    <div>
-      <Title title={props.titleAttr} />
-      <input value={props.titleAttr} onChange={handleChange.bind(this)} />
-    </div>
+    <header className='my-grid-item'>
+      <div>
+        <div>Hello, {title}</div>
+        <input value={title} onChange={handleChange} />
+      </div>
+    </header>
   );
 };
 

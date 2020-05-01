@@ -7,12 +7,12 @@ import AxiosController from './axiosSample/AxiosController';
 export const StateContext = createContext('');
 
 const Layout = (props) => {
-  const [name, setName] = useState('Welcome!');
+  const [username, setUserName] = useState('taro');
   const [title, setTitle] = useState('Title');
 
   // コンテキストに設定するもの
   function getResource() {
-    return { name: 'taro', age: 28 }
+    return { name: username, age: 28, namehandler:setUserName }
   };
   const resource = getResource();
 

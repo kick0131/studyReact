@@ -1,7 +1,7 @@
 React練習
 ==================================================
 
-自己学習用
+勉強
 
 ## 準備
 * [node.js](https://nodejs.org/)
@@ -20,6 +20,3 @@ npm run build
 * vsCodeからサーバ起動（npm run start）
 * ブラウザからhttp://localhost:8080にアクセス
 
-
-## その他
-* dist内のindex.htmlはnpm buildで出力されるファイルではなく、動作確認のために配置したもの。

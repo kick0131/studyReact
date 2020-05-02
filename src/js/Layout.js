@@ -1,7 +1,7 @@
 import React, { useState, createContext } from 'react';
 import Header from './Header';
 import Context_Parent from './contextSample/Context_Parent';
-import AxiosController from './axiosSample/AxiosController';
+import Axios_Action from './axiosSample/Axios_Action';
 
 // 最上位のReactコンポーネントでコンテキストを用意
 export const StateContext = createContext('');
@@ -25,7 +25,7 @@ const Layout = (props) => {
           <StateContext.Provider value={resource}>
             <Context_Parent />
           </StateContext.Provider>
-          <AxiosController />
+          <Axios_Action />
         </main>
         <footer className='my-grid-item'>フッター</footer>
       </div>

@@ -1,0 +1,10 @@
+{
+  "name": "taro",
+  "age": 28,
+  "option": {
+    "arg": [
+      "arg1",
+      "arg2"
+    ]
+  }
+}

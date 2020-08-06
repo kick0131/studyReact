@@ -5,7 +5,7 @@ import Axios_Child from './Axios_Child';
 
 export const AxiosContext = createContext('');
 
-const Axios_Action = (props) => {
+export default (props) => {
   const [axiosbody, setAxiosBody] = useState('');
   // コンテキストに設定するもの
   function getResource() {
@@ -17,7 +17,7 @@ const Axios_Action = (props) => {
     // GET通信
     axios.get(
       // テスト用のローカルjson
-      './axios_sample.json'
+      './data/axios_sample.json'
       // 本来はREST API等を想定（記載例は公式で公開されているつつじバス運行状況）
       // 'http://tutujibus.com/busstopLookup.php?rosenid=1'
 
@@ -41,11 +41,10 @@ const Axios_Action = (props) => {
   return (
     <div>
       <AxiosContext.Provider value={resource}>
-        <button onClick={axiosGet}>実行</button>
-        <Axios_Child />
+        <button onClick={axiosGet} >実行</button>
+        <Axios_Child/>
       </AxiosContext.Provider>
     </div>
   );
 }
 
-export default Axios_Action;

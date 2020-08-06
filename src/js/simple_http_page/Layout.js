@@ -1,12 +1,11 @@
 import React, { useState, createContext } from 'react';
 import Header from './Header';
 import Context_Parent from './contextSample/Context_Parent';
-import Axios_Action from './axiosSample/Axios_Action';
 
 // 最上位のReactコンポーネントでコンテキストを用意
 export const StateContext = createContext('');
 
-const Layout = (props) => {
+export default (props) => {
   const [username, setUserName] = useState('taro');
   const [title, setTitle] = useState('Title');
 
@@ -25,7 +24,6 @@ const Layout = (props) => {
           <StateContext.Provider value={resource}>
             <Context_Parent />
           </StateContext.Provider>
-          <Axios_Action />
         </main>
         <footer className='my-grid-item'>フッター</footer>
       </div>
@@ -33,4 +31,3 @@ const Layout = (props) => {
   );
 };
 
-export default Layout;

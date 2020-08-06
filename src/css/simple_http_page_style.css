@@ -62,3 +62,34 @@ footer {
 
   background: #95a5a6;
 }
+
+/* for contextSample */
+.contextSample-my-grid {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 300px 1fr;
+  grid-template-areas:
+  "areaA areaB"
+  "areaA areaC"
+  "areaA areaD"
+  "areaA areaE";
+
+  /* 書かないとデフォルトでマージンが差し引かれる */
+  width: 100%;
+  height: 100%;
+}
+#itemA {
+  grid-area: areaA;
+}
+#itemB {
+  grid-area: areaB;
+}
+#itemC {
+  grid-area: areaC;
+}
+#itemE {
+  grid-area: areaD;
+}
+#itemE {
+  grid-area: areaE;
+}

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Header = (props) => {
+export default (props) => {
   const [title, setTitle] = useState('world');
 
   const handleChange = (e) => {
@@ -16,5 +16,3 @@ const Header = (props) => {
     </header>
   );
 };
-
-export default Header;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { StateContext } from '../Layout';
 
-const Context_Input = (props) => {
+export default (props) => {
   const resourceName = React.useContext(StateContext);
 
   const handleChange = (e) => {
@@ -9,10 +9,10 @@ const Context_Input = (props) => {
   };
 
   return (
-    <div>
-        <input value={resourceName.name} onChange={handleChange} />
-    </div>
+    <>
+        <input id="itemC"value={resourceName.name} onChange={handleChange} />
+    </>
   );
 };
 
-export default Context_Input;
+

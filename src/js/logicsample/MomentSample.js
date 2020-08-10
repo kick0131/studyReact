@@ -21,7 +21,6 @@ export default (props) => {
 
     // momentの使い方
     const dummy2 = () => {
-        const startDate = '2020-08-10';
         console.log('--- default Timezone ');
         // UTC時刻 format:ISO 8601表示
         console.log(moment.tz().format());
@@ -44,8 +43,14 @@ export default (props) => {
         var formattime = moment(unixtime, "X").tz("Asia/Tokyo").format();
         console.log('unix to ISO8601: ' + formattime);
 
-        // start = moment.tz(moment(moment.tz(startDate, 'Asia/Tokyo').format("YYYY-MM-DD")), 'Asia/Tokyo').utc().toISOString();
-        // console.log(start);
+        // 日付指定
+        var start = moment.tz('2020-08-10 12:34:56', 'Asia/Tokyo').format();
+
+        // 配列で日付指定可能、注意点として月は0開始（文字列でも同様にパースされる）
+        start = moment.tz([2020, 8, 10], 'Asia/Tokyo').format();
+        start = moment.tz([2020, 0, 1], 'Asia/Tokyo').format();
+        // start = moment.tz(['2020', '08', '10', '12', '34', '56'], 'Asia/Tokyo').format();
+        console.log(start);
     }
 
     const handleClicked = () => {

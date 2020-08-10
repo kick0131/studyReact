@@ -5,6 +5,7 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 // ユーザコンポーネント
 import SelectRadio from './parts/SelectRadio'
+import MomentSample from '../logicsample/MomentSample'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -36,6 +37,7 @@ export default () => {
           <Grid item xs={9}>
             <Paper className={classes.paper}>contents</Paper>
             <SelectRadio vertical={false}/>
+            <MomentSample/>
           </Grid>
           <Grid item xs={12}>
             <Paper className={classes.paper}>footer</Paper>

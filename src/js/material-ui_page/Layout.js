@@ -7,6 +7,7 @@ import Grid from '@material-ui/core/Grid';
 import SelectRadio from './parts/SelectRadio'
 import CounterButton from './parts/CounterButton'
 import TextBox from './parts/TextBox'
+import MomentSample from '../logicsample/MomentSample'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -40,6 +41,7 @@ export default () => {
             <SelectRadio vertical={false}/>
             <CounterButton />
             <TextBox />
+            <MomentSample/>
           </Grid>
           <Grid item xs={12}>
             <Paper className={classes.paper}>footer</Paper>
